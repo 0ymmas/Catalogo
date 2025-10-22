@@ -1,0 +1,87 @@
+/*hacemos el titulo una marquesina con movimiento*/
+.marquee {
+    width: 80%;
+    margin: 50px auto;
+    overflow: hidden;
+    border: 2px solid #3498db;
+    padding: 10px;
+}
+.titulo-desplazable {
+    display: inline-block;
+    white-space: nowrap;
+    font-size: 2.5rem;
+    color: #e74c3c;
+    animation: desplazamiento 10s linear infinite;
+}
+@keyframes desplazamiento {
+    0%{
+        transform: translateX(80vw);
+    }
+    100%{
+        transform: translateX(-100vw);
+    }
+}
+
+
+/* se da formato a toda la página */
+body {
+    font-family: sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-color: #f4f4f4;
+}
+#catalogo {
+    display: grid; /* Esta propiedad permite trabajar con un contenedor en cuadrícula */
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    /* Significa que quieres que el contenedor de la cuadrícula tenga tantas columnas como sea posible, donde cada
+       columna tendrá un tamaño mínimo de 250px y un ancho maximo de 1 parte fraccionaria (1fr)*/
+    gap: 20px; /* Se usa para dar espacio entre las columnas */
+    padding: 20px; /* Crea espacio entre el contenido y los bordes */
+  }
+  /*Dar estilo a cada tarjeta donde aparecen los televisores*/
+  .producto-card img{
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 15px;
+    text-align: center;
+    box-shadow: 0 20px 8px rgba(7, 7, 7, 0.1); /* Sombra */
+  }
+  /*estilo a cada imagen*/
+  .producto-card img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 4px;
+  }
+  /*Estilo para los subtítulos que están en las tarjetas*/
+  .producto-card h2 {
+    font-size: 1.2em;
+    margin: 10px 0;
+  }
+/*Estilo para el texto dentro de las tarjetas*/
+.producto-card p {
+    color: #666;
+    font-size: 0.9em;
+  }
+  /*estilo al precio del televisor*/
+  .precio {
+    font-size: 1.5em;
+    color: #007BFF;
+    font-weight: bold;
+    padding: 20px;
+    margin: 10px 0;
+  }
+  /*Estilo del botón que realiza la compra*/
+  .btn-comprar {
+  background-color: #28a745;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+ /*10. estilo para el cambio del cursor cuando pase por encima del botón*/
+ .btn-comprar:hover {
+    background-color: #302188;
+  }
